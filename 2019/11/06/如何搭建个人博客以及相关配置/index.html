@@ -7,15 +7,20 @@
   
   <title>如何搭建个人博客以及相关配置 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一步 Hexo 搭建本地静态网页一、Hexo 的环境配置——安装 Node.js1.登录网址为 https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;download&#x2F;；找到 Download 板块。2.根据本机类型，选择相应的版本下载； 注：如何确定自己电脑的类型呢？解决办法：计算机-&amp;gt;右键-&amp;gt;属性，本机是64位架构 。因此，我这里做如下选择： 3.安装下载的 node-v10.16.3-x">
+  <meta name="description" content="一、Hexo 的环境配置——安装 Node.js1.登录网址为 https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;download&#x2F;；找到 Download 板块。2.根据本机类型，选择相应的版本下载； 注：如何确定自己电脑的类型呢？解决办法：计算机-&amp;gt;右键-&amp;gt;属性，本机是64位架构 。因此，我这里做如下选择：3.安装下载的 node-v10.16.3-x86 文件，一路 next，即可完成">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何搭建个人博客以及相关配置">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="第一步 Hexo 搭建本地静态网页一、Hexo 的环境配置——安装 Node.js1.登录网址为 https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;download&#x2F;；找到 Download 板块。2.根据本机类型，选择相应的版本下载； 注：如何确定自己电脑的类型呢？解决办法：计算机-&amp;gt;右键-&amp;gt;属性，本机是64位架构 。因此，我这里做如下选择： 3.安装下载的 node-v10.16.3-x">
+<meta property="og:description" content="一、Hexo 的环境配置——安装 Node.js1.登录网址为 https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;download&#x2F;；找到 Download 板块。2.根据本机类型，选择相应的版本下载； 注：如何确定自己电脑的类型呢？解决办法：计算机-&amp;gt;右键-&amp;gt;属性，本机是64位架构 。因此，我这里做如下选择：3.安装下载的 node-v10.16.3-x86 文件，一路 next，即可完成">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-06T13:57:33.994Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE&#x2F;%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE&#x2F;1.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE&#x2F;%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE&#x2F;2.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE&#x2F;%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE&#x2F;3.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE&#x2F;%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE&#x2F;5.jpg">
+<meta property="og:updated_time" content="2019-11-06T14:48:39.353Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE&#x2F;%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE&#x2F;1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -65,7 +70,7 @@
         <section id="main"><article id="post-如何搭建个人博客以及相关配置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/11/06/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2019-11-06T13:53:54.000Z" itemprop="datePublished">2019-11-06</time>
+  <time datetime="2019-11-06T14:38:22.000Z" itemprop="datePublished">2019-11-06</time>
 </a>
     
   </div>
@@ -84,12 +89,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="第一步-Hexo-搭建本地静态网页"><a href="#第一步-Hexo-搭建本地静态网页" class="headerlink" title="第一步 Hexo 搭建本地静态网页"></a>第一步 Hexo 搭建本地静态网页</h1><p>一、Hexo 的环境配置——安装 Node.js<br>1.登录网址为 <a href="https://nodejs.org/en/download/；找到" target="_blank" rel="noopener">https://nodejs.org/en/download/；找到</a> Download 板块。<br>2.根据本机类型，选择相应的版本下载； 注：如何确定自己电脑的类型呢？解决办法：计算机-&gt;右键-&gt;属性，本机是64位架构 。因此，我这里做如下选择：</p>
-<p>3.安装下载的 node-v10.16.3-x86 文件，一路 next，即可完成安装。 注：nodejs 默认的安装中会包含环境变量的配置和 npm 工具的安装。</p>
-<p>4.检验是否安装成功：在“开始”菜单中输入 cmd，打开命令行窗口<br>（1） 输入 node –v，若显示版本号，则 nodejs 安装成功；<br>（2） 输入 npm -v，若显示版本号，则 npm 安装成功；</p>
-<p>5.至此，Hexo 的环境配置已经全部完成。</p>
-<p>二、Hexo 的安装<br>1.使用 npm 命令安装 Hexo 客户端，输入：npm install -g hexo-cli</p>
-<p>上图表示我们已经成功安装了 Hexo 客户端，且版本号为 2.0.0。<br>2.确定自己博客（撰写/更新）的文件夹在本机位置：例如，可以在 D 盘新建一个 blog 的文件夹，然后将命令行切换到这个目录下</p>
+        <p>一、Hexo 的环境配置——安装 Node.js<br>1.登录网址为 <a href="https://nodejs.org/en/download/；找到" target="_blank" rel="noopener">https://nodejs.org/en/download/；找到</a> Download 板块。<br>2.根据本机类型，选择相应的版本下载； 注：如何确定自己电脑的类型呢？解决办法：计算机-&gt;右键-&gt;属性，本机是64位架构 。因此，我这里做如下选择：<br><img src="%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/1.jpg" alt="1"><br>3.安装下载的 node-v10.16.3-x86 文件，一路 next，即可完成安装。 注：nodejs 默认的安装中会包含环境变量的配置和 npm 工具的安装。<br><img src="%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/2.jpg" alt="2"><br>4.检验是否安装成功：在“开始”菜单中输入 cmd，打开命令行窗口<br>（1） 输入 node –v，若显示版本号，则 nodejs 安装成功；<br>（2） 输入 npm -v，若显示版本号，则 npm 安装成功；<br><img src="%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/3.jpg" alt="3"><br>5.至此，Hexo 的环境配置已经全部完成。</p>
+<p>二、Hexo 的安装<br>1.使用 npm 命令安装 Hexo 客户端，输入：npm install -g hexo-cli<br><img src="%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/5.jpg" alt="4"><br>上图表示我们已经成功安装了 Hexo 客户端，且版本号为 2.0.0。<br>2.确定自己博客（撰写/更新）的文件夹在本机位置：例如，可以在 D 盘新建一个 blog 的文件夹，然后将命令行切换到这个目录下</p>
 <p>3.将该文件夹初始化为 hexo 网页框架所在位置，输入 hexo init:</p>
 <p>不难发现，命令执行失败，因为它需要从 github 上下载程序，因此我们首先需要下载 Git 工 具。<br>4.登录 git 的 windows 版本下载页面：<a href="https://git-scm.com/download/win。根据自己" target="_blank" rel="noopener">https://git-scm.com/download/win。根据自己</a> 系统类型，选择性安装。我这里是安装 Git-2.23.0-64-bit 文件。</p>
 <p>在安装过程中有如下两个页面要注意选择，其他一路 Next.</p>
@@ -124,7 +125,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/06/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/" data-id="ck2ndi9uv0003kcwbd782eg1p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/06/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/" data-id="ck2neby8i00039cwb908w42mc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -133,19 +134,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/11/06/Beacon/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Beacon
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/16/helloccit/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/11/06/Beacon/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">helloccit</div>
+      <div class="article-nav-title">Beacon</div>
     </a>
   
 </nav>
@@ -182,11 +174,11 @@
       <ul>
         
           <li>
-            <a href="/2019/11/06/Beacon/">Beacon</a>
+            <a href="/2019/11/06/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/">如何搭建个人博客以及相关配置</a>
           </li>
         
           <li>
-            <a href="/2019/11/06/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/">如何搭建个人博客以及相关配置</a>
+            <a href="/2019/11/06/Beacon/">Beacon</a>
           </li>
         
           <li>
